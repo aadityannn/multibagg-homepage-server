@@ -11,10 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 
 connectToDatabase();
 
-app.get("/home", async function (req, res) {
-    res.send("Hello World");
-});
-
 app.use("/", emailInfoRoutes);
 
 const PORT = process.env.PORT || 8000;
