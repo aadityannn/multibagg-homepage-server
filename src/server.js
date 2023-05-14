@@ -5,7 +5,7 @@ const connectToDatabase = require("./database");
 const emailInfoRoutes = require("./routes/emailInfoRoutes");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://www.multibagg.com/" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
