@@ -6,7 +6,11 @@ const emailInfoRoutes = require("./routes/emailInfoRoutes");
 
 const app = express();
 const corsOptions = {
-    origin: ["https://multibagg.com", "https://www.multibagg.com"],
+    origin: [
+        "http://localhost:3000",
+        "https://multibagg.com",
+        "https://www.multibagg.com",
+    ],
 };
 app.use(cors(corsOptions));
 app.use(express.json());
