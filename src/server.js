@@ -5,7 +5,10 @@ const connectToDatabase = require("./database");
 const emailInfoRoutes = require("./routes/emailInfoRoutes");
 
 const app = express();
-app.use(cors({ origin: "https://multibagg.com" }));
+const corsOptions = {
+    origin: ["https://multibagg.com", "https://www.multibagg.com"],
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
