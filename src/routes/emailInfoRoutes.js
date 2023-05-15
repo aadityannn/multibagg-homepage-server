@@ -19,8 +19,15 @@ router.post(
             email: req.body.email,
         });
         await email.save();
-        const emailInfo = await EmailInfo.find();
-        res.json(emailInfo);
+        res.json({ message: "Successfully added the Email." });
+    })
+);
+
+router.delete(
+    "/:id",
+    asyncHandler(async function (req, res) {
+        await EmailInfo.findByIdAndDelete(req.params.id);
+        res.json({ message: "Successfully deleted the Email." });
     })
 );
 
