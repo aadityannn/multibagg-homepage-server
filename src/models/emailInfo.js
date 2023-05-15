@@ -6,7 +6,7 @@ const emailInfoSchema = new mongoose.Schema({
         required: true,
     },
     timestamp: {
-        type: Date,
+        type: String,
         default: () =>
             new Date().toLocaleString("en-US", {
                 dateStyle: "full",

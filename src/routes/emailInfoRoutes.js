@@ -24,6 +24,14 @@ router.post(
 );
 
 router.delete(
+    "/deleteAll",
+    asyncHandler(async function (req, res) {
+        await EmailInfo.deleteMany({});
+        res.json({ message: "Successfully deleted all Emails." });
+    })
+);
+
+router.delete(
     "/:id",
     asyncHandler(async function (req, res) {
         await EmailInfo.findByIdAndDelete(req.params.id);
