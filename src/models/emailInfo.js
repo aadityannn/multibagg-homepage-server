@@ -9,6 +9,7 @@ const emailInfoSchema = new mongoose.Schema({
         type: String,
         default: () =>
             new Date().toLocaleString("en-US", {
+                timeZone: "Asia/Kolkata",
                 dateStyle: "full",
                 timeStyle: "long",
             }),
