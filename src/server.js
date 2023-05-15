@@ -6,11 +6,12 @@ const emailInfoRoutes = require("./routes/emailInfoRoutes");
 
 const app = express();
 const corsOptions = {
-    origin: "*",
+    origin: "https://multibagg.com",
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
 };
-app.options("*", cors(corsOptions));
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
