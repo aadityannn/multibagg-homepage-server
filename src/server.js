@@ -10,6 +10,7 @@ const corsOptions = {
         "http://localhost:3000",
         "https://multibagg.com",
         "https://www.multibagg.com",
+        "https://main--wonderful-concha-0a0357.netlify.app/",
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
